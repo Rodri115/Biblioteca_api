@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'biblioteca_api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'biblioteca_db',        # nombre de la base que creaste en pgAdmin
+        'USER': 'postgres',             # tu usuario de PostgreSQL
+        'PASSWORD': '123',    # tu contraseña de PostgreSQL
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
