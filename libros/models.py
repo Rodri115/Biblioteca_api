@@ -18,7 +18,10 @@ class Libro(models.Model):
     fecha_lanzamiento = models.DateField()
     genero = models.ForeignKey(Genero, on_delete=models.SET_NULL, null=True, related_name='libros')
     autor = models.ForeignKey(Autor, on_delete=models.CASCADE, related_name='libros')
-    book_url = models.FileField(upload_to='libros/')
+    book_url = models.FileField(upload_to='libros/', blank=True, null=True)  # <- Modificado
+
+    def __str__(self):
+        return self.nombre
 
     def __str__(self):
         return self.nombre

@@ -69,4 +69,4 @@ Se agregarán visualizaciones usando pandas y matplotlib.
 
 #Contacto
 Si tenés dudas o sugerencias, escribime por GitHub o abrí un Issue.
-Hecho con amor por Rodrigo Lugogit push origin main
+Hecho con amor por Rodrigo Lugo
