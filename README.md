@@ -173,12 +173,21 @@ Biblioteca_api/
 │   └── wsgi.py          # Configuración WSGI
 ├── apps/                 # Aplicaciones Django
 │   ├── libros/          # App de libros
+<<<<<<< HEAD
+=======
+│   ├── autores/         # App de autores
+│   ├── generos/         # App de géneros
+│   └── calificaciones/  # App de calificaciones
+>>>>>>> 2cf7b16fb551ef683f7ba005c56823c3df7d22a1
 ├── media/               # Archivos subidos
 ├── static/              # Archivos estáticos
 ├── requirements.txt     # Dependencias del proyecto
 ├── manage.py           # Script de gestión de Django
+<<<<<<< HEAD
 │── analisis/             # Aplicaciones Django
 │   ├── analisis.py/   # Analisis de datos
+=======
+>>>>>>> 2cf7b16fb551ef683f7ba005c56823c3df7d22a1
 └── README.md           # Este archivo
 ```
 
@@ -223,4 +232,8 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ⭐ Si este proyecto te ha sido útil, ¡no olvides darle una estrella!
 
+<<<<<<< HEAD
 **Hecho con ❤️ por Rodrigo Lugo**
+=======
+**Hecho con ❤️ por Rodrigo Lugo**
+>>>>>>> 2cf7b16fb551ef683f7ba005c56823c3df7d22a1
