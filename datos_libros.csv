@@ -1,0 +1,51 @@
+id,nombre,fecha_lanzamiento,genero,autor,nacionalidad_autor,calificacion_promedio
+1,Don Quijote de la Mancha,1605-01-16,Novela,Miguel de Cervantes,España,4.6
+2,Bodas de Sangre,1933-03-08,Teatro,Federico García Lorca,España,4.0
+4,El Aleph,1949-06-30,Cuento,Jorge Luis Borges,Argentina,4.666666666666667
+5,Laberinto de la Soledad,1950-08-15,Ensayo,Octavio Paz,México,3.6666666666666665
+6,Cien Años de Soledad,1967-05-30,Novela,Gabriel García Márquez,Colombia,4.75
+7,La Ciudad y los Perros,1963-10-15,Novela,Mario Vargas Llosa,Perú,3.6666666666666665
+8,Pedro Páramo,1955-03-19,Novela,Juan Rulfo,México,4.666666666666667
+9,Rayuela,1963-06-28,Novela,Julio Cortázar,Argentina,3.6666666666666665
+10,La Casa de los Espíritus,1982-04-20,Novela,Isabel Allende,Chile,3.6666666666666665
+11,Fuente Ovejuna,1619-07-12,Teatro,Lope de Vega,España,3.5
+12,Rimas y Leyendas,1871-05-20,Poesía,Gustavo Adolfo Bécquer,España,3.6666666666666665
+13,Azul,1888-07-30,Poesía,Rubén Darío,Nicaragua,3.5
+14,Los Heraldos Negros,1919-07-10,Poesía,César Vallejo,Perú,3.5
+15,Niebla,1914-05-15,Novela,Miguel de Unamuno,España,3.5
+16,Campos de Castilla,1912-06-30,Poesía,Antonio Machado,España,4.0
+17,Fortunata y Jacinta,1887-01-01,Novela,Benito Pérez Galdós,España,3.6666666666666665
+19,El Túnel,1948-06-15,Novela,Ernesto Sabato,Argentina,3.5
+20,La Muerte de Artemio Cruz,1962-04-10,Novela,Carlos Fuentes,México,4.0
+21,Cantares Gallegos,1863-05-17,Poesía,Rosalía de Castro,España,3.5
+22,Tirano Banderas,1926-09-20,Novela,Ramón María del Valle-Inclán,España,3.0
+23,La Regenta,1884-10-15,Novela,Leopoldo Alas Clarín,España,3.6666666666666665
+24,Ismaelillo,1882-03-10,Poesía,José Martí,Cuba,3.5
+25,Tradiciones Peruanas,1872-11-20,Humor,Ricardo Palma,Perú,4.0
+26,Los Pazos de Ulloa,1886-12-01,Novela,Emilia Pardo Bazán,España,3.5
+27,Artículos de Costumbres,1835-08-15,Ensayo,Mariano José de Larra,España,3.0
+3,Veinte Poemas de Amor,1924-06-16,Poesía,Pablo Neruda,Chile,4.5
+18,Cuentos de Amor y Muerte,1917-05-10,Cuento,Horacio Quiroga,Uruguay,4.0
+40,Del Sentimiento Trágico,1913-07-08,Filosofía,Miguel de Unamuno,España,3.5
+28,El Buscón,1626-09-10,Novela,Francisco de Quevedo,España,3.5
+29,El Burlador de Sevilla,1630-05-22,Teatro,Tirso de Molina,España,4.0
+30,La Vida es Sueño,1635-04-18,Teatro,Pedro Calderón de la Barca,España,4.666666666666667
+31,Ficciones,1944-12-02,Cuento,Jorge Luis Borges,Argentina,4.5
+32,Romance de la Pena Negra,1928-07-15,Poesía,Federico García Lorca,España,4.0
+33,Estravagario,1958-09-12,Poesía,Pablo Neruda,Chile,3.5
+34,El Llano en Llamas,1953-02-28,Cuento,Juan Rulfo,México,4.0
+35,Bestiario,1951-11-15,Cuento,Julio Cortázar,Argentina,3.5
+36,Novelas Ejemplares,1613-10-14,Cuento,Miguel de Cervantes,España,4.0
+37,Doña Perfecta,1876-03-30,Novela,Benito Pérez Galdós,España,3.5
+38,Marianela,1878-02-15,Novela,Benito Pérez Galdós,España,3.5
+39,Soledades,1903-01-20,Poesía,Antonio Machado,España,4.0
+41,Luces de Bohemia,1920-04-25,Teatro,Ramón María del Valle-Inclán,España,4.0
+42,Yerma,1934-12-29,Teatro,Federico García Lorca,España,3.5
+43,Prosas Profanas,1896-10-30,Poesía,Rubén Darío,Nicaragua,4.0
+44,Trilce,1922-07-19,Poesía,César Vallejo,Perú,3.5
+45,Sobre Héroes y Tumbas,1961-08-10,Novela,Ernesto Sabato,Argentina,4.0
+46,Aura,1962-01-15,Novela,Carlos Fuentes,México,3.5
+47,Versos Sencillos,1891-04-12,Poesía,José Martí,Cuba,4.0
+48,El Conde Lucanor,1335-06-20,Cuento,Miguel de Cervantes,España,3.5
+49,La Celestina,1499-08-15,Teatro,Miguel de Cervantes,España,4.5
+50,Popol Vuh,1857-05-10,Política,Miguel de Cervantes,España,3.5

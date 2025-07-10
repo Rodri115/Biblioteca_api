@@ -5,8 +5,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from django.http import HttpResponse
-from django.shortcuts import render
+from rest_framework.authtoken.views import obtain_auth_token  # <-- Importamos el endpoint para token
 from .views import register 
+from rest_framework.authtoken.views import obtain_auth_token
+
 
 @login_required
 def home(request):
@@ -32,14 +34,19 @@ def home(request):
 urlpatterns = [
     path('', home),
     path('admin/', admin.site.urls),
-    path('api/token/', auth_views.LoginView.as_view(template_name='login.html'), name='token_obtain_pair'),
-    path('api/token/refresh/', auth_views.LoginView.as_view(template_name='login.html'), name='token_refresh'),
+
+    # Ruta para obtener token (POST con username y password, devuelve token)
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
+
+    # Tus rutas API agrupadas
     path('api/', include('libros.urls')),
 
-    # Autenticación
+    # Login, logout y registro de usuarios
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
     path('register/', register, name='register'),
+    path('api/login-token/', obtain_auth_token, name='api_token_auth'),
+
 ]
 
 if settings.DEBUG:
