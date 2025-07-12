@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>Listado de Calificaciones</title></head>
+<body style="font-family: Arial; padding: 2rem;">
+    <h2>⭐ Lista de Calificaciones</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Libro</th>
+            <th>Valor</th>
+        </tr>
+        {% for calificacion in calificaciones %}
+        <tr>
+            <td>{{ calificacion.libro.nombre }}</td>
+            <td>{{ calificacion.valor }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="pagination">
+        <span>Página {{ calificaciones.number }} de {{ calificaciones.paginator.num_pages }}</span><br>
+        {% if calificaciones.has_previous %}
+            <a href="?page=1">« primera</a>
+            <a href="?page={{ calificaciones.previous_page_number }}">‹ anterior</a>
+        {% endif %}
+        {% if calificaciones.has_next %}
+            <a href="?page={{ calificaciones.next_page_number }}">siguiente ›</a>
+            <a href="?page={{ calificaciones.paginator.num_pages }}">última »</a>
+        {% endif %}
+    </div>
+</body>
+</html>

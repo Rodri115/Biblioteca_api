@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>¿Estás seguro de que deseas eliminar la calificacion "{{ calificacion.libro.nombre }}"?</h2>
+<form method="post">{% csrf_token %}
+  <button type="submit">✅ Confirmar</button>
+</form>
+<a href="{% url 'calificacion_list' %}">❌ Cancelar</a>
+{% endblock %}

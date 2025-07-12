@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Biblioteca</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .welcome {
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 1rem 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        .logout {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .logout a {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .logout a:hover {
+            background-color: #c82333;
+        }
+
+        .admin-note {
+            margin-top: 2rem;
+            background-color: #e9f7ef;
+            padding: 1rem;
+            border-left: 5px solid #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Bienvenido, {{ user.username }}</h1>
+        <p class="welcome">Explora y gestiona la colección de la biblioteca:</p>
+        <ul>
+            <li>📘 <a href="/api/libros/">Libros</a></li>
+            <li>✍️ <a href="/api/autores/">Autores</a></li>
+            <li>🏷️ <a href="/api/generos/">Géneros</a></li>
+            <li>⭐ <a href="/api/calificaciones/">Calificaciones</a></li>
+        </ul>
+
+        {% if user.is_staff %}
+        <div class="admin-note">
+            <strong>🛠️ Modo administrador:</strong>
+            <p>Tenés acceso completo para crear, actualizar y eliminar registros.</p>
+            <p>➡️ <a href="/admin/">Ir al panel de administración</a></p>
+        </div>
+        {% endif %}
+
+        <div class="logout">
+            <a href="{% url 'logout' %}">🚪 Cerrar sesión</a>
+        </div>
+    </div>
+</body>
+</html>

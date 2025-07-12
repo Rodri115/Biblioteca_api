@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>Listado de Autores</title></head>
+<body style="font-family: Arial; padding: 2rem;">
+    <h2>✍️ Lista de Autores</h2>
+    <a href="{% url 'autor_create' %}">➕ Nuevo Autor</a>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Nombre</th>
+            <th>Nacionalidad</th>
+            <th>Acciones</th>
+        </tr>
+        {% for autor in autores %}
+        <tr>
+            <td>{{ autor.nombre }}</td>
+            <td>{{ autor.nacionalidad }}</td>
+            <td>
+                <a href="{% url 'autor_update' autor.id %}">✏️ Editar</a>
+                <a href="{% url 'autor_delete' autor.id %}">🗑️ Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="pagination">
+        <span>Página {{ autores.number }} de {{ autores.paginator.num_pages }}</span><br>
+        {% if autores.has_previous %}
+            <a href="?page=1">« primera</a>
+            <a href="?page={{ autores.previous_page_number }}">‹ anterior</a>
+        {% endif %}
+        {% if autores.has_next %}
+            <a href="?page={{ autores.next_page_number }}">siguiente ›</a>
+            <a href="?page={{ autores.paginator.num_pages }}">última »</a>
+        {% endif %}
+    </div>
+</body>
+</html>

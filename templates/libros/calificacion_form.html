@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ form.instance.pk|yesno:"✏️ Editar calificacion,➕ Nueva calificacion" }}</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Guardar</button>
+</form>
+<a href="{% url 'calificacion_list' %}">🔙 Volver</a>
+{% endblock %}

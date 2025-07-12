@@ -5,13 +5,16 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from django.http import HttpResponse
-from rest_framework.authtoken.views import obtain_auth_token  # <-- Importamos el endpoint para token
-from .views import register 
 from rest_framework.authtoken.views import obtain_auth_token
+from .views import register, home  # Import from main project views
+from django.contrib import admin
+from django.urls import path, include
+from libros.views import login_view, logout_view, register, home
 
 
 @login_required
-def home(request):
+def home_placeholder(request):
+    # This is just a placeholder since you have your own home view
     user = request.user
     html = f"""
     <html>
@@ -32,22 +35,12 @@ def home(request):
     return HttpResponse(html)
 
 urlpatterns = [
-    path('', home),
     path('admin/', admin.site.urls),
-
-    # Ruta para obtener token (POST con username y password, devuelve token)
-    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
-
-    # Tus rutas API agrupadas
-    path('api/', include('libros.urls')),
-
-    # Login, logout y registro de usuarios
-    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
+    path('', home, name='home'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
     path('register/', register, name='register'),
-    path('api/login-token/', obtain_auth_token, name='api_token_auth'),
-
+    path('api/', include('libros.urls')),  # tus endpoints API
 ]
-
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

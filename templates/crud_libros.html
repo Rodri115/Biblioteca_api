@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD de Libros</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        h2 {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h2>📚 Gestión de Libros</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Autor</th>
+                <th>Género</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for libro in libros %}
+            <tr>
+                <td>{{ libro.nombre }}</td>
+                <td>{{ libro.autor.nombre }}</td>
+                <td>{{ libro.genero.nombre }}</td>
+                <td>{{ libro.fecha_lanzamiento }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">No hay libros registrados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

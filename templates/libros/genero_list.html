@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><title>Listado de Géneros</title></head>
+<body style="font-family: Arial; padding: 2rem;">
+    <h2>🏷️ Lista de Géneros</h2>
+    <a href="{% url 'genero_create' %}">➕ Nuevo Género</a>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </tr>
+        {% for genero in generos %}
+        <tr>
+            <td>{{ genero.nombre }}</td>
+            <td>
+                <a href="{% url 'genero_update' genero.id %}">✏️ Editar</a>
+                <a href="{% url 'genero_delete' genero.id %}">🗑️ Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="pagination">
+        <span>Página {{ generos.number }} de {{ generos.paginator.num_pages }}</span><br>
+        {% if generos.has_previous %}
+            <a href="?page=1">« primera</a>
+            <a href="?page={{ generos.previous_page_number }}">‹ anterior</a>
+        {% endif %}
+        {% if generos.has_next %}
+            <a href="?page={{ generos.next_page_number }}">siguiente ›</a>
+            <a href="?page={{ generos.paginator.num_pages }}">última »</a>
+        {% endif %}
+    </div>
+</body>
+</html>

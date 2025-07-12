@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biblioteca CRUD</title>
+</head>
+<body style="font-family: Arial; padding: 2rem;">
+  <nav>
+    <a href="{% url 'home' %}">🏠 Inicio</a> |
+    <a href="{% url 'libro_list' %}">📘 Libros</a> |
+    <a href="{% url 'autor_list' %}">✍️ Autores</a> |
+    <a href="{% url 'genero_list' %}">🏷️ Géneros</a> |
+    <a href="{% url 'calificacion_list' %}">⭐ Calificaciones</a> |
+    <a href="{% url 'logout' %}">🚪 Cerrar sesión</a>
+  </nav>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>
