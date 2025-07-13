@@ -186,12 +186,24 @@ Biblioteca_api/
 └── README.md           # Este archivo
 ```
 
+## Grificos de estadisticas
+<img width="2000" height="1500" alt="Cantidad libros por genero" src="https://github.com/user-attachments/assets/31b837bc-26a4-4825-bd34-e0a9dcad5e67" />
+Con este grafico podemos ver cuales son los generos con mayor cantidad de libros
+
+<img width="2000" height="1500" alt="Promedio calificacion por genero" src="https://github.com/user-attachments/assets/86c3c95e-c384-4e30-8f72-37b45447d3c1" />
+Con este podemos ver los generos que tienen mejor cilificacion en promedio
+
+<img width="2000" height="1500" alt="Distribucion de nacionalidad por autor" src="https://github.com/user-attachments/assets/e53cafb4-2b2d-4ecc-8c85-657db200ffbc" />
+Con este grafico podemos ver como se distribuyen las nacionalidades de los autores de los libros en esta biblioteca
+
+<img width="2000" height="1500" alt="Top 5 autores por cantidad de libros" src="https://github.com/user-attachments/assets/61c46a77-28c5-43fe-a3b1-e2da55406aee" />
+Aqui podemos ver cuales son los autores con mayor cantidad de libros
+
+
+
 ## 🔮 Próximas Características
 
-- **Autenticación y Autorización**: Implementación de JWT o autenticación por token
-- **Estadísticas y Análisis**: Visualizaciones con pandas y matplotlib
 - **Búsqueda Avanzada**: Filtros y búsqueda por múltiples criterios
-- **Sistema de Recomendaciones**: Algoritmos de recomendación basados en calificaciones
 - **Documentación OpenAPI**: Swagger/OpenAPI para documentación interactiva
 - **Tests Automatizados**: Suite completa de pruebas unitarias e integración
 
